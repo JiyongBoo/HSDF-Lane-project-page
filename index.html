@@ -291,15 +291,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img src="static/images/00_teaser.jpg" alt="HSDF-Lane teaser image" loading="lazy" />
       <h2 class="subtitle has-text-centered">
-        <strong>HSDF-Lane</strong>: Teaser video caption TBD
-      </h2>
+        <strong>Comparison between slope-anchor methods and HSDF-Lane.</strong>
     </div>
   </div>
 </section>
@@ -324,10 +318,14 @@
 
 
 <!-- Results -->
-<section class="hero is-small">
+<section class="hero is-small results-section">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Results</h2>
+        </div>
+      </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <video controls muted loop preload="metadata">
@@ -340,14 +338,6 @@
             <source src="static/videos/demo2.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered"><strong>3D Lane Detection Demo</strong> Comparison of 3D lane detection performance between HSDF-Lane and SC-Lane (baseline) during sharp curve transitions. HSDF-Lane achieves superior detection accuracy in highly curved scenes. Furthermore, attention map visualizations reveal that while the baseline exhibits scattered attention in irrelevant regions, HSDF-Lane effectively localizes attention strictly around the lane structures, facilitated by LSPE.</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/TBD.png" alt="Result image TBD" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">TBD</h2>
-        </div>
-        <div class="item">
-          <img src="static/images/TBD.png" alt="Result image TBD" loading="lazy"/>
-          <h2 class="subtitle has-text-centered">TBD</h2>
         </div>
       </div>
     </div>
@@ -431,20 +421,44 @@
                 <td>0.128</td>
               </tr>
               <tr>
-                <td>SparseLaneSTP</td>
-                <td>66.1</td>
-                <td><strong>0.203</strong></td>
-                <td>0.240</td>
-                <td><strong>0.066</strong></td>
-                <td><strong>0.092</strong></td>
+                <td>Rethinking</td>
+                <td>64.7</td>
+                <td>0.205</td>
+                <td>0.255</td>
+                <td>0.074</td>
+                <td>0.105</td>
               </tr>
               <tr>
+                <td>GLane3D-B</td>
+                <td>63.9</td>
+                <td><u>0.193</u></td>
+                <td>0.234</td>
+                <td><strong>0.065</strong></td>
+                <td><strong>0.090</strong></td>
+              </tr>
+              <tr>
+                <td>SparseLaneSTP</td>
+                <td>66.1</td>
+                <td>0.203</td>
+                <td>0.240</td>
+                <td><u>0.066</u></td>
+                <td><u>0.092</u></td>
+              </tr>
+              <tr class="hsdf-ours-row">
                 <td><strong>HSDF-Lane (Ours)</strong></td>
-                <td><strong>66.3</strong></td>
+                <td><u>66.3</u></td>
                 <td>0.201</td>
-                <td><strong>0.234</strong></td>
-                <td>0.087</td>
-                <td>0.117</td>
+                <td><strong>0.223</strong></td>
+                <td>0.088</td>
+                <td>0.114</td>
+              </tr>
+              <tr class="hsdf-ours-dagger-row">
+                <td><strong>HSDF-Lane<sup>†</sup> (Ours)</strong></td>
+                <td><strong>66.9</strong></td>
+                <td><strong>0.186</strong></td>
+                <td><u>0.226</u></td>
+                <td>0.084</td>
+                <td>0.114</td>
               </tr>
             </tbody>
           </table>
@@ -454,23 +468,6 @@
   </div>
 </section>
 
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-        <iframe  src="static/pdfs/TBD.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
