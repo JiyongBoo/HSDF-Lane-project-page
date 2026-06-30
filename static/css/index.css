@@ -329,6 +329,21 @@ body {
   height: auto;
 }
 
+.table-container table {
+  border-top: 1px solid var(--border-color);
+}
+
+.table-container caption {
+  text-align: left;
+  caption-side: top;
+  padding-bottom: 0.75rem;
+}
+
+.table thead th {
+  vertical-align: middle !important;
+  line-height: 1.2;
+}
+
 .results-carousel .subtitle {
   font-size: 1rem !important;
   color: var(--text-secondary);
